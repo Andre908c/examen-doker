@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Productos - Parcial</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; }
+        .form-container { background: white; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 8px; margin: 8px 0 15px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #007bff; color: white; padding: 10px; border: none; width: 100%; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .success { color: green; margin-top: 10px; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registro de Productos</h2>
+        <form action="/" method="POST">
+            <label for="nombre">Nombre Producto</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="categoria">Categoría</label>
+            <input type="text" id="categoria" name="categoria" required>
+
+            <label for="precio">Precio</label>
+            <input type="number" step="0.01" id="precio" name="precio" required>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h3>Productos Registrados:</h3>
+        <ul>
+            {% for producto in productos %}
+                <li><b>{{ producto[1] }}</b> ({{ producto[2] }}) - ${{ producto[3] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
