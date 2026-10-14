@@ -45,7 +45,7 @@ Con Compose se levantan MySQL (`mydb`) y la app:
 docker compose up -d --build
 ```
 
-Abre `http://localhost:8080` (en Codespaces usa el puerto 8080 publicado).
+Abre `http://localhost:5001` (en Codespaces usa el puerto 5001 publicado).
 
 ## 4. Subir la imagen a Docker Hub
 

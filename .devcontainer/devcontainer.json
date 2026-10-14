@@ -4,6 +4,6 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [5001],
   "postCreateCommand": "pip install -r requirements.txt"
 }
